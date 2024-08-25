@@ -5,6 +5,7 @@ import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 
 const ShowBook = () => {
+  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5555';
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -12,7 +13,7 @@ const ShowBook = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`${apiUrl}/books/${id}`)
       .then((res) => {
         setBook(res.data);
         setLoading(false);
@@ -53,7 +54,7 @@ const ShowBook = () => {
         </div>
         <div className='my-4'>
           <span className='text-xl mr-4 text-gray-500'>Last Update Time</span>
-          <span>{new Date(book.updatedAt).toLocaleString()}</span> 
+          <span>{new Date(book.updatedAt).toLocaleString()}</span>
         </div>
       </div>
     </div>

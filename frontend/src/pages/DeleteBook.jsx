@@ -5,12 +5,13 @@ import Spinner from "../components/Spinner";
 import axios from "axios";
 
 const DeleteBook = () => {
+  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5555';
   const [loading,setLoading]=useState(false)
   const navigate=useNavigate();
   const {id} =useParams();
   const handleDeleteBook=()=>{
     setLoading(true)
-    axios.delete(`http://localhost:5555/books/${id}`)
+    axios.delete(`${apiUrl}/books/${id}`)
     .then(()=>{
       setLoading(false)
       navigate('/')

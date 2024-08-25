@@ -5,6 +5,7 @@ import BackButton from "../components/BackButton"
 import Spinner from "../components/Spinner"
 
 const CreateBooks = () => {
+  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5555';
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
   const [publishYear, setPublishYear] = useState('')
@@ -15,7 +16,7 @@ const CreateBooks = () => {
       title, author, publishYear
     };
     setLoading(true);
-    axios.post('http://localhost:5555/books', data)
+    axios.post(`${apiUrl}/books`, data)
       .then(() => {
         setLoading(false);
         navigate('/');

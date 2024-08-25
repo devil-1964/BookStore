@@ -5,6 +5,7 @@ import BackButton from "../components/BackButton"
 import Spinner from "../components/Spinner"
 
 const EditBook = () => {
+  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5555';
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
   const [publishYear, setPublishYear] = useState('')
@@ -13,7 +14,7 @@ const EditBook = () => {
   const { id } = useParams();
   useEffect(() => {
     setLoading(true)
-    axios.get(`http://localhost:5555/books/${id}`)
+    axios.get(`${apiUrl}/books/${id}`)
       .then((res) => {
         setAuthor(res.data.author)
         setPublishYear(res.data.publishYear)
@@ -30,7 +31,7 @@ const EditBook = () => {
       title, author, publishYear
     };
     setLoading(true);
-    axios.put( `http://localhost:5555/books/${id}`, data)
+    axios.put( `${apiUrl}/books/${id}`, data)
       .then(() => {
         setLoading(false);
         navigate('/');
