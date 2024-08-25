@@ -5,7 +5,7 @@ import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 
 const ShowBook = () => {
-  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5555';
+  const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'http://localhost:5555';
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

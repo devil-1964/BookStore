@@ -7,7 +7,7 @@ import BooksTable from '../components/home/BooksTable.jsx'
 import BooksCard from '../components/home/BooksCard.jsx'
 
 const Home = () => {
-  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5555';
+  const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'http://localhost:5555';
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState("table");

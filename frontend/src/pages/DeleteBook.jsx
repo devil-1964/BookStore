@@ -5,7 +5,7 @@ import Spinner from "../components/Spinner";
 import axios from "axios";
 
 const DeleteBook = () => {
-  const apiUrl = import.meta.env.REACT_APP_API_URL || 'http://localhost:5555';
+  const apiUrl = import.meta.env.VITE_REACT_APP_API_URL || 'http://localhost:5555';
   const [loading,setLoading]=useState(false)
   const navigate=useNavigate();
   const {id} =useParams();
