@@ -4,6 +4,19 @@ This is a simple Book Management CRUD application built using the MERN stack (Mo
 
 The frontend is deployed on Vercel, and the backend is deployed on Render.
 
+## 📕 Show Books Page
+![image](https://github.com/user-attachments/assets/4372ba32-0d96-48c3-983c-2fafba8e5413)
+
+## 📖 Details Page
+![image](https://github.com/user-attachments/assets/9f665b25-45c2-4c44-b433-2e67f6f28c27)
+
+## 🗑️ Delete Book Page
+![image](https://github.com/user-attachments/assets/4a0657d6-23c1-47d0-bd0f-b662ac85c22e)
+
+## 📝 Edit Book Page
+![image](https://github.com/user-attachments/assets/d96acea8-c599-4f70-80e7-9b546c88bfc4)
+
+
 ## 🚀 Features
 
 - **Create**: Add new books to your collection.
